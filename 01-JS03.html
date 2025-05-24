@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Завдання додому</title>
+</head>
+<body>
+    <h1 id="mainHeader">Це заголовок першого рівня</h1>
+    <button onclick="toggleHeader()">Перемкнути заголовок</button>
+
+    <script>
+        const originalHeader = document.getElementById('mainHeader').outerHTML;
+        let isHeaderVisible = true;
+
+        function toggleHeader() {
+            const header = document.getElementById('mainHeader');
+            if (isHeaderVisible) {
+                header.remove();
+                isHeaderVisible = false;
+            } else {
+                document.body.insertAdjacentHTML('afterbegin', originalHeader);
+                isHeaderVisible = true;
+            }
+        }
+    </script>
+</body>
+</html>
