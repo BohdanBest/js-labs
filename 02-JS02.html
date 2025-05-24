@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лабораторна_02-JS02</title>
+</head>
+<body>
+    <h1>Демонстрація способів виведення інформації в JavaScript</h1>
+    <div class="output" id="result">Тут буде виведено результат</div>
+    <script>
+        var result = document.getElementById('result');
+        result.innerHTML = "Результат обчислення: " + (0.1 + 0.2) + "<br>";
+
+        document.write("<p>Результат через document.write: " + (9 + 10) + "</p>");
+
+        window.alert("Важлива інформація! Результат: " + (20 + 17));
+
+        console.log("Результат у консолі: " + (20 + 17));
+    </script>
+</body>
+</html>
