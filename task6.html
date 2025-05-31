@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Завдання 6 - Відстеження розміру вікна</title>
+    <link rel="stylesheet" href="styles/task6-styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Завдання 6 - Відстеження розміру вікна браузера</h1>
+        <div class="size-display">
+            <div class="size-item">
+                <span class="label">Ширина:</span>
+                <span id="windowWidth" class="value">-</span>
+                <span class="unit">px</span>
+            </div>
+            <div class="size-item">
+                <span class="label">Висота:</span>
+                <span id="windowHeight" class="value">-</span>
+                <span class="unit">px</span>
+            </div>
+        </div>
+        <div class="visual-indicator">
+            <div id="sizeBar" class="size-bar"></div>
+        </div>
+        <div class="info">
+            <p>Змініть розмір вікна браузера, щоб побачити оновлення в реальному часі</p>
+            <div class="stats">
+                <div>Співвідношення сторін: <span id="aspectRatio">-</span></div>
+                <div>Площа: <span id="area">-</span> px²</div>
+            </div>
+        </div>
+    </div>
+    <script src="scripts/task6.js"></script>
+</body>
+</html>

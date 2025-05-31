@@ -3,131 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Облік надходження товарів</title>
+    <title>Завдання 2 - Зміна стилів CSS</title>
     <link rel="stylesheet" href="styles/task2-styles.css">
 </head>
 <body>
     <div class="container">
-        <h1>Облік надходження товарів</h1>
-        
-        <table id="goodsTable">
-            <thead>
-                <tr>
-                    <th>№</th>
-                    <th>Назва товару</th>
-                    <th>Кількість</th>
-                    <th>Ціна за одиницю</th>
-                    <th>Сума</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>1</td>
-                    <td>Хліб</td>
-                    <td class="quantity">10</td>
-                    <td class="price">15.50</td>
-                    <td class="sum">155.00</td>
-                </tr>
-                <tr>
-                    <td>2</td>
-                    <td>Молоко</td>
-                    <td class="quantity">25</td>
-                    <td class="price">28.00</td>
-                    <td class="sum">700.00</td>
-                </tr>
-                <tr>
-                    <td>3</td>
-                    <td>Яблука</td>
-                    <td class="quantity">50</td>
-                    <td class="price">35.00</td>
-                    <td class="sum">1750.00</td>
-                </tr>
-                <tr>
-                    <td>4</td>
-                    <td>Цукор</td>
-                    <td class="quantity">20</td>
-                    <td class="price">22.50</td>
-                    <td class="sum">450.00</td>
-                </tr>
-                <tr>
-                    <td>5</td>
-                    <td>Борошно</td>
-                    <td class="quantity">15</td>
-                    <td class="price">18.00</td>
-                    <td class="sum">270.00</td>
-                </tr>
-            </tbody>
-            <tfoot>
-                <tr class="total-row">
-                    <td colspan="4"><strong>Загальна вартість:</strong></td>
-                    <td id="totalSum"><strong>3325.00</strong></td>
-                </tr>
-            </tfoot>
-        </table>
-        
-        <div class="edit-section">
-            <h3>Редагування товару</h3>
-            <div class="form-row">
-                <div class="form-group">
-                    <label for="rowSelect">Оберіть товар:</label>
-                    <select id="rowSelect" onchange="selectRow()">
-                        <option value="">-- Оберіть товар --</option>
-                        <option value="0">1. Хліб</option>
-                        <option value="1">2. Молоко</option>
-                        <option value="2">3. Яблука</option>
-                        <option value="3">4. Цукор</option>
-                        <option value="4">5. Борошно</option>
-                    </select>
-                </div>
-            </div>
-            
-            <div class="form-row">
-                <div class="form-group">
-                    <label for="newQuantity">Нова кількість:</label>
-                    <input type="text" id="newQuantity" onchange="isNumb(this)">
-                </div>
-                
-                <div class="form-group">
-                    <label for="newPrice">Нова ціна:</label>
-                    <input type="text" id="newPrice" onchange="isNumb(this)">
-                </div>
-            </div>
-            
-            <div class="button-group">
-                <button onclick="updateRow()" class="update-btn">Оновити дані</button>
-                <button onclick="addNewRow()" class="add-btn">Додати новий товар</button>
-                <button onclick="deleteRow()" class="delete-btn">Видалити товар</button>
-            </div>
-        </div>
-        
-        <div class="add-section" id="addSection" style="display: none;">
-            <h3>Додавання нового товару</h3>
-            <div class="form-row">
-                <div class="form-group">
-                    <label for="newName">Назва товару:</label>
-                    <input type="text" id="newName">
-                </div>
-            </div>
-            
-            <div class="form-row">
-                <div class="form-group">
-                    <label for="addQuantity">Кількість:</label>
-                    <input type="text" id="addQuantity" onchange="isNumb(this)">
-                </div>
-                
-                <div class="form-group">
-                    <label for="addPrice">Ціна за одиницю:</label>
-                    <input type="text" id="addPrice" onchange="isNumb(this)">
-                </div>
-            </div>
-            
-            <div class="button-group">
-                <button onclick="confirmAdd()" class="confirm-btn">Підтвердити додавання</button>
-                <button onclick="cancelAdd()" class="cancel-btn">Скасувати</button>
-            </div>
+        <h1>Завдання 2 - Зміна стилів CSS</h1>
+        <p id="text">I learning JavaScript events!</p>
+        <div>
+            <button onclick="changeCSS()">Change style!</button>
+            <button onclick="resetCSS()">Скинути стиль</button>
         </div>
     </div>
-    
-    <script src="scripts/processOrder.js"></script>
+    <script src="scripts/task2.js"></script>
 </body>
 </html>

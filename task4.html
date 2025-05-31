@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Завдання 4 - Видалення елементів списку</title>
+    <link rel="stylesheet" href="styles/task4-styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Завдання 4 - Видалення елементів випадаючого списку</h1>
+        <div class="control-panel">
+            <label for="itemSelect">Виберіть елемент для видалення:</label>
+            <select id="itemSelect">
+                <option value="apple">Яблуко</option>
+                <option value="banana">Банан</option>
+                <option value="orange">Апельсин</option>
+                <option value="grape">Виноград</option>
+                <option value="strawberry">Полуниця</option>
+                <option value="pineapple">Ананас</option>
+            </select>
+            <button id="deleteButton">Видалити обраний елемент</button>
+        </div>
+        <div class="info">
+            <p>Всього елементів: <span id="itemCount">6</span></p>
+            <button id="resetButton">Відновити всі елементи</button>
+        </div>
+    </div>
+    <script src="scripts/task4.js"></script>
+</body>
+</html>
+

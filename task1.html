@@ -3,42 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Калькулятор тригонометричних функцій</title>
+    <title>Завдання 1 - Робота з вікнами</title>
     <link rel="stylesheet" href="styles/task1-styles.css">
 </head>
 <body>
     <div class="container">
-        <h1>Калькулятор тригонометричних функцій</h1>
-        
-        <form id="trigForm">
-            <div class="form-group">
-                <label for="function">Функція:</label>
-                <select id="function" name="function">
-                    <option value="sin">sin(x)</option>
-                    <option value="cos">cos(x)</option>
-                    <option value="tan">tg(x)</option>
-                </select>
-            </div>
-            
-            <div class="form-group">
-                <label for="startAngle">Початковий кут (градуси):</label>
-                <input type="text" id="startAngle" name="startAngle" onchange="isNumb(this)" required>
-            </div>
-            
-            <div class="form-group">
-                <label for="endAngle">Кінцевий кут (градуси):</label>
-                <input type="text" id="endAngle" name="endAngle" onchange="isNumb(this)" required>
-            </div>
-            
-            <div class="form-group">
-                <label for="step">Крок (градуси):</label>
-                <input type="text" id="step" name="step" onchange="isNumb(this)" required>
-            </div>
-            
-            <button type="button" onclick="calculate()" class="calculate-btn">Обчислити</button>
-        </form>
+        <h1>Завдання 1 - Робота з вікнами</h1>
+        <button id="startDemo">Запустити демонстрацію</button>
+        <div id="status">Натисніть кнопку для початку демонстрації</div>
     </div>
-    
-    <script src="scripts/calculation.js"></script>
+    <script src="scripts/task1.js"></script>
 </body>
 </html>
