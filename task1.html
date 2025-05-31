@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Робота з зображеннями</title>
+    <link rel="stylesheet" href="styles/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Лабораторна робота №10 - Робота з зображеннями</h1>
+
+      <div class="task">
+        <h2>Завдання 1: Перегляд фотографій</h2>
+        <div class="controls">
+          <label for="photoSelect">Оберіть фотографію:</label>
+          <select id="photoSelect" onchange="prosm(this)">
+            <option value="">-- Оберіть фото --</option>
+            <option value="nature">Природа</option>
+            <option value="city">Місто</option>
+            <option value="mountain">Гори</option>
+            <option value="sea">Море</option>
+            <option value="forest">Ліс</option>
+          </select>
+        </div>
+        <div id="photoDisplay">
+          <p style="color: #666">Оберіть фотографію зі списку для перегляду</p>
+        </div>
+      </div>
+      
+    <script src="scripts/showImage.js"></script>
+  </body>
+</html>
