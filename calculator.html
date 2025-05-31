@@ -1,0 +1,25 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Обчислення тригонометричних функцій</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <h2>Калькулятор тригонометричних функцій</h2>
+    <p>Виберіть функцію:</p>
+    <select name="function" onchange="checkFunction(this)">
+        <option value="">Оберіть функцію</option>
+        <option value="sin">sin</option>
+        <option value="cos">cos</option>
+        <option value="tan">tan</option>
+    </select>
+    <p>Введіть кут у градусах:</p>
+    <input type="text" name="angle" onchange="checkAngle(this)">
+    <p><button onclick="calculate()">Обчислити</button></p>
+    <p><b id="result"></b></p>
+
+    <script src="scripts/calculator.js">
+    </script>
+</body>
+</html>
