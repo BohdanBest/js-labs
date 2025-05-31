@@ -1,64 +1,33 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Малювання еліпсів</title>
-    <link rel="stylesheet" href="styles/style.css" />
-  </head>
-  <body>
-    <div class="task">
-        <h2>Завдання 2: Малювання еліпсів</h2>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Перетягування квадрата</title>
+    <link rel="stylesheet" href="styles/task2-styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Перетягування квадрата мишкою</h1>
+        <div class="instructions">
+            <h3>Інструкції:</h3>
+            <p>Встановіть курсор на червоний квадрат, натисніть ліву кнопку миші і тягніть квадрат.</p>
+            <p>Квадрат можна переміщати тільки всередині сірої області.</p>
+            <p>Для звільнення квадрата від захоплення відпустіть кнопку миші.</p>
+        </div>
+        
+        <div class="drag-area" id="dragArea">
+            <div class="drag-square" id="dragSquare"></div>
+            <div class="coordinates" id="coordinates">
+                Позиція: (0, 0)
+            </div>
+        </div>
+        
         <div class="controls">
-          <label
-            >Велика піввісь (a):
-            <input type="number" id="axisA" value="100" min="10" max="200"
-          /></label>
-          <label
-            >Мала піввісь (b):
-            <input type="number" id="axisB" value="60" min="10" max="150"
-          /></label>
-          <button onclick="drawEllipse()">Намалювати еліпс</button>
-          <button onclick="clearDrawing()">Очистити</button>
+            <button id="resetBtn">Скинути позицію</button>
+            <button id="centerBtn">По центру</button>
         </div>
-
-        <div class="method-selector">
-          <strong>Метод малювання:</strong>
-          <label
-            ><input type="radio" name="method" value="pixels" checked />
-            Піксельний (мозаїка)</label
-          >
-          <label><input type="radio" name="method" value="svg" /> SVG</label>
-          <label
-            ><input type="radio" name="method" value="canvas" /> Canvas</label
-          >
-        </div>
-
-        <div class="drawing-area" id="drawingArea">
-          <canvas
-            id="drawingCanvas"
-            width="500"
-            height="400"
-            style="display: none"
-          ></canvas>
-          <svg
-            id="drawingSVG"
-            width="500"
-            height="400"
-            style="display: none; border: 1px solid #ccc"
-          ></svg>
-          <div
-            id="pixelContainer"
-            style="
-              position: relative;
-              width: 500px;
-              height: 400px;
-              border: 1px solid #ccc;
-            "
-          ></div>
-        </div>
-      </div>
     </div>
-    <script src="scripts/drawEllipse.js"></script>
-  </body>
+    <script src="scripts/moveSquare.js"></script>
+</body>
 </html>

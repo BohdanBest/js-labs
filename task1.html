@@ -1,33 +1,26 @@
 <!DOCTYPE html>
 <html lang="uk">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Робота з зображеннями</title>
-    <link rel="stylesheet" href="styles/style.css" />
-  </head>
-  <body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Рух квадрата по колу</title>
+    <link rel="stylesheet" href="styles/task1-styles.css">
+</head>
+<body>
     <div class="container">
-      <h1>Лабораторна робота №10 - Робота з зображеннями</h1>
-
-      <div class="task">
-        <h2>Завдання 1: Перегляд фотографій</h2>
+        <h1>Рух квадрата по колу</h1>
         <div class="controls">
-          <label for="photoSelect">Оберіть фотографію:</label>
-          <select id="photoSelect" onchange="prosm(this)">
-            <option value="">-- Оберіть фото --</option>
-            <option value="nature">Природа</option>
-            <option value="city">Місто</option>
-            <option value="mountain">Гори</option>
-            <option value="sea">Море</option>
-            <option value="forest">Ліс</option>
-          </select>
+            <button id="startStopBtn">Запустити</button>
+            <div class="parameters">
+                <label>Радіус: <input type="range" id="radiusSlider" min="50" max="200" value="100"> <span id="radiusValue">100</span>px</label>
+                <label>Швидкість: <input type="range" id="speedSlider" min="1" max="10" value="5"> <span id="speedValue">5</span></label>
+            </div>
         </div>
-        <div id="photoDisplay">
-          <p style="color: #666">Оберіть фотографію зі списку для перегляду</p>
+        <div class="motion-area">
+            <div id="square" class="square"></div>
+            <div id="center" class="center-point"></div>
         </div>
-      </div>
-      
-    <script src="scripts/showImage.js"></script>
-  </body>
+    </div>
+    <script src="scripts/circularMotion.js"></script>
+</body>
 </html>
